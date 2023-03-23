@@ -2,7 +2,7 @@
 
 Submitted by: **Angel Avila**
 
-This web app: **Generate random Yu-Gi-Oh! cards using the Yu-Gi-Oh! API by YGOPRODeck, while allowing users to filter through cards by banning certain attributes**
+This web app: **Generates random Yu-Gi-Oh! cards using the Yu-Gi-Oh! API by YGOPRODeck, while allowing users to filter through cards by banning certain attributes**
 
 Time spent: **12** hours spent in total
 
