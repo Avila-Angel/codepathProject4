@@ -1,4 +1,4 @@
-# Web Development Project 4 - *Time to Duel - Yu-Gi-Oh! *
+# Web Development Project 4 - *Time to Duel (Yu-Gi-Oh!)*
 
 Submitted by: **Angel Avila**
 
