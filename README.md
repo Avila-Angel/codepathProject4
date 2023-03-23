@@ -1,5 +1,5 @@
 # Web Development Project 4 - *Time to Duel (Yu-Gi-Oh!)*
-
+<img src="https://github.com/Avila-Angel/codepathProject4/blob/main/codepathProject4/src/assets/yugiohS.png" />
 Submitted by: **Angel Avila**
 
 This web app: **Generates random Yu-Gi-Oh! cards using the Yu-Gi-Oh! API by YGOPRODeck, while allowing users to filter through cards by banning certain attributes**
