@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import shuffle from "../public/shuffle.png";
+import cardIcon from "./assets/cardIcon.png";
+import duelDiskIcon from "./assets/duelDiskIcon.png";
 import YuGiOhCard from "./components/YuGiOhCard";
 import axios from "axios";
 
 function App() {
   const [card, setCard] = useState([]);
-  const [index, setIndex] = useState(Math.floor(Math.random() * 40));
+  const [index, setIndex] = useState(Math.floor(Math.random() * 20));
   const [generatedCard, setGeneratedCard] = useState({
     name: "Fenrir",
     type: ["Effect Monster", "Beast"],
@@ -20,7 +21,7 @@ function App() {
   const [bannedList, setBannedList] = useState([]);
 
   async function fetchData() {
-    for (let i = 1; i < 40; i++) {
+    for (let i = 1; i < 20; i++) {
       const url = `ttps://db.ygoprodeck.com/api/v7/cardinfo.php?name=Decode%20Talker/${i}`;
       const response = await axios.get(url);
       let cardData = response.data;
@@ -37,7 +38,7 @@ function App() {
         level: cardData.level,
         attribute: cardData.attribute,
       };
-      setPokemon((card) => [...card, cardObject]);
+      setCard((card) => [...card, cardObject]);
     }
   }
 
@@ -46,7 +47,7 @@ function App() {
   }, []);
 
   function generateCard() {
-    setIndex(Math.floor(Math.random() * 40));
+    setIndex(Math.floor(Math.random() * 20));
     setGeneratedCard(card[index]);
   }
 
@@ -65,8 +66,9 @@ function App() {
           <h1 id="mainTitle">It's Time to Du-Du-Du-Du DUEL!</h1>
           <button id="generate" onClick={generateCard}>
             <p id="generateText">Generate Card</p>
-            <img id="shuffle" src={shuffle}></img>
+            <img id="random" src={cardIcon}></img>
           </button>
+          <img id="duelDiskIcon" src={duelDiskIcon} width={250}></img>
         </div>
       </div>
       <div className="container">
@@ -103,21 +105,21 @@ function App() {
                   id="image"
                   src={generatedCard.image}
                   width={225}
-                  height={225}
+                  height={250}
                 ></img>
               </div>
               <div className="bioBio">
                 <div className="attackSection">
                   <p className="header">Attack</p>
-                  <p id="height">{generatedCard.attack}</p>
+                  <p id="attack">{generatedCard.attack}</p>
                 </div>
                 <div className="defenseSection">
                   <p className="header">Defense</p>
-                  <p id="weight">{generatedCard.defense}</p>
+                  <p id="defense">{generatedCard.defense}</p>
                 </div>
-                <div className="defenseSection">
+                <div className="attackSection">
                   <p className="header">Level</p>
-                  <p id="defense">{generatedCard.level}</p>
+                  <p id="attack">{generatedCard.level}</p>
                 </div>
                 <div className="defenseSection">
                   <p className="header">Attribute</p>

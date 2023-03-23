@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
 :root{
-  --dark-blue: #072AC8;
+  --dark-blue: #8b4513;
   --close-white: #F8F9FA;
   --dark-grey: #595F65;
 }
@@ -17,6 +17,8 @@ body{
   justify-content: center;
   align-items: center;
   height: 300px;
+  width: 90rem;
+  
 }
 .container{
   display: flex;
@@ -57,6 +59,14 @@ body{
   font-size: 24px;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
+  color: #8b4513;
+}
+
+#duelDiskIcon{
+  position: absolute;
+  top: 10%;
+  right: 4%;
+  display: none;
 }
 
 .cardInfoSection{
@@ -78,6 +88,7 @@ body{
   font-size: 20px;
   height: fit-content;
   width: fit-content;
+  color: #8b4513;
 }
 .typeOuterContainer{
   display: flex;
@@ -116,6 +127,7 @@ body{
 .bioImage{
   display: flex;
   justify-content: center;
+  margin-right: 20px;
 }
 .header{
   font-size: 24px;
@@ -127,6 +139,8 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #8b4513;
+  margin-right: 15px;
 }
 #attack, #defense{
   margin: 0;
@@ -134,12 +148,12 @@ body{
   margin-top: 1rem;
   font-size: 20px;
   font-weight: 500;
-  color: var(--dark-grey);
+  color: #8b4513;
 }
 .bannedTypes{
   height: 200px;
   width: 90%;
-  background-color: #F14B3D;
+  background-color: #8b4513;
   border-radius: 20px;
   text-align: center;
   margin: 0 auto;
@@ -181,7 +195,7 @@ body{
   .bannedTypes{
     height: 400px;
     width: 250px;
-    background-color: #F14B3D;
+    background-color: #8b4513;
     border-radius: 20px;
     text-align: center;
   }
@@ -193,5 +207,14 @@ body{
     width: 400px;
     justify-content: left;
   }
+  #duelDiskIcon{
+    display: block;
+  }
 
+}
+
+#random {
+  width: 50px;
+  height: 50px;
+  
 }
