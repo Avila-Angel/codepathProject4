@@ -22,7 +22,7 @@ function App() {
 
   async function fetchData() {
     for (let i = 1; i < 20; i++) {
-      const url = `ttps://db.ygoprodeck.com/api/v7/cardinfo.php?name=Decode%20Talker/${i}`;
+      const url = `https://db.ygoprodeck.com/api/v7/cardinfo.php?id=${i}`;
       const response = await axios.get(url);
       let cardData = response.data;
       let type = cardData.type;
@@ -33,7 +33,7 @@ function App() {
         name: cardData.name,
         type: newType,
         image: cardData.sprites.other.dream_world.front_default,
-        attack: cardnData.attack,
+        attack: cardData.attack,
         defense: cardData.defense,
         level: cardData.level,
         attribute: cardData.attribute,
